@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+
+    <ul>
+        {% for todo in todo_list %}
+        <li>{{todo}}</li>
+        {% endfor %}
+    </ul>
+    <form action="{{ url_for('add_item')}}" method="post"> <!--2 inputs: text and submit, when submit is pressed a post request is sent-->
+        todo
+        <input type="text" name="todoitem"><br>
+        <input type="submit" value="Submit"><br>
+    </form>
+
+</body>
+</html>
